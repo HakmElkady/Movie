@@ -84,8 +84,7 @@ namespace texts {
 
             namespace Movie {
                 export const Description: string;
-                export const GenreId: string;
-                export const GenreName: string;
+                export const GenreList: string;
                 export const Kind: string;
                 export const MovieId: string;
                 export const ReleaseDate: string;
@@ -93,6 +92,14 @@ namespace texts {
                 export const Storyline: string;
                 export const Title: string;
                 export const Year: string;
+            }
+
+            namespace MovieGenres {
+                export const GenreId: string;
+                export const GenreName: string;
+                export const MovieGenreId: string;
+                export const MovieId: string;
+                export const MovieTitle: string;
             }
         }
     }
@@ -200,7 +207,8 @@ export const Texts: typeof texts = proxyTexts({}, '', {
         },
         MovieDB: {
             Genre: {},
-            Movie: {}
+            Movie: {},
+            MovieGenres: {}
         }
     },
     Forms: {

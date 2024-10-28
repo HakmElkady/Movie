@@ -5,6 +5,15 @@
     <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
     <TypeScriptNoEmitOnError>false</TypeScriptNoEmitOnError>
     <DotNetSergen>dotnet sergen</DotNetSergen>
+    <!--#if (IsNotTemplate)-->
+    <CommonSrc>..\..\..\common-features\src\</CommonSrc>
+    <SerenitySrc>..\..\..\src\</SerenitySrc>
+    <DotNetSergenDir>$(SerenitySrc)Serenity.Net.CodeGenerator\bin\</DotNetSergenDir>
+    <DotNetSergen Condition="Exists('$(DotNetSergenDir)sergen')">$(DotNetSergenDir)sergen</DotNetSergen>
+    <DotNetSergen Condition="Exists('$(DotNetSergenDir)sergen.exe')">$(DotNetSergenDir)sergen.exe</DotNetSergen>
+    <DefineConstants>$(DefineConstants);Northwind;BasicSamples</DefineConstants>
+    <UseProjectRefs Condition="!Exists('$(SerenitySrc)Serenity.Net.sln')">false</UseProjectRefs>
+    <!--#endif-->
   </PropertyGroup>
   <ItemGroup>
     <TypeScriptCompile Remove="node_modules\**" />
@@ -26,6 +35,12 @@
     <PackageReference Include="Serenity.Corelib" Version="8.7.2" />
     <PackageReference Include="Serenity.Net.Web" Version="8.7.2" />
     <PackageReference Include="Serenity.Extensions" Version="8.7.2" />
+    <!--#if (Northwind)-->
+    <PackageReference Include="Serenity.Demo.Northwind" Version="8.7.2" />
+    <!--#endif-->
+    <!--#if (BasicSamples)-->
+    <PackageReference Include="Serenity.Demo.BasicSamples" Version="8.7.2" />
+    <!--#endif-->
   </ItemGroup>
   <ItemGroup></ItemGroup>
   <Target Name="NpmInstall" BeforeTargets="BeforeBuild" Condition="!Exists('node_modules\.bin\esbuild')">
