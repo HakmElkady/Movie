@@ -12,6 +12,7 @@ export interface MovieColumns {
     ReleaseDate: Column<MovieRow>;
     Runtime: Column<MovieRow>;
     Kind: Column<MovieRow>;
+    GenreName: Column<MovieRow>;
 }
 
 export class MovieColumns extends ColumnsBase<MovieRow> {

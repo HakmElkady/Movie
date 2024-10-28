@@ -9,7 +9,7 @@ namespace Movie.MovieDB.Columns;
 [BasedOnRow(typeof(MovieRow), CheckNames = true)]
 public class MovieColumns
 {
-    [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+    [EditLink, DisplayName("Db.Shared.RecordId"), AlignCenter]
     public int MovieId { get; set; }
     [EditLink]
     public string Title { get; set; }
@@ -18,9 +18,13 @@ public class MovieColumns
     public int Year { get; set; }
     public DateTime ReleaseDate { get; set; }
 
-    [DisplayName("Runtime in Minutes"), Width(150), AlignRight]
+    [DisplayName("Runtime in Mins"), Width(110), AlignCenter]
     public int Runtime { get; set; }
 
     public MovieKind Kind { get; set; }
+
+    [Width(100), QuickFilter]
+    public string GenreName { get; set; }
+
 
 }
