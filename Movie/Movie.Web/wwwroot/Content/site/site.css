@@ -11,3 +11,13 @@
 .s-PermissionCheckEditor {
   min-height: 450px;
 }
+
+.s-MovieDB-MovieDialog > .size {
+  width: 650px;
+  height: 550px;
+}
+
+.s-MovieDB-MovieDialog .caption {
+  width: 150px;
+  color:blue;
+}
