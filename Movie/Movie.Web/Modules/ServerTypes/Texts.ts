@@ -75,6 +75,41 @@ namespace texts {
             }
         }
 
+        namespace Club {
+
+            namespace Club {
+                export const ClubId: string;
+                export const ClubName: string;
+                export const Code: string;
+                export const PingTime: string;
+            }
+
+            namespace Employee {
+                export const Address: string;
+                export const BirthDate: string;
+                export const ClubId: string;
+                export const ClubName: string;
+                export const EmployeeId: string;
+                export const FirstName: string;
+                export const Gender: string;
+                export const LastName: string;
+                export const Salary: string;
+            }
+        }
+
+        namespace Default {
+
+            namespace Person {
+                export const BirthDate: string;
+                export const BirthPlace: string;
+                export const FirstName: string;
+                export const Gender: string;
+                export const Height: string;
+                export const LastName: string;
+                export const PersonId: string;
+            }
+        }
+
         namespace MovieDB {
 
             namespace Genre {
@@ -94,12 +129,32 @@ namespace texts {
                 export const Year: string;
             }
 
+            namespace MovieCast {
+                export const Character: string;
+                export const MovieCastId: string;
+                export const MovieId: string;
+                export const MovieTitle: string;
+                export const PersonFullName: string;
+                export const PersonId: string;
+            }
+
             namespace MovieGenres {
                 export const GenreId: string;
                 export const GenreName: string;
                 export const MovieGenreId: string;
                 export const MovieId: string;
                 export const MovieTitle: string;
+            }
+
+            namespace Person {
+                export const BirthDate: string;
+                export const BirthPlace: string;
+                export const FirstName: string;
+                export const FullName: string;
+                export const Gender: string;
+                export const Height: string;
+                export const LastName: string;
+                export const PersonId: string;
             }
         }
     }
@@ -205,10 +260,19 @@ export const Texts: typeof texts = proxyTexts({}, '', {
             UserPermission: {},
             UserRole: {}
         },
+        Club: {
+            Club: {},
+            Employee: {}
+        },
+        Default: {
+            Person: {}
+        },
         MovieDB: {
             Genre: {},
             Movie: {},
-            MovieGenres: {}
+            MovieCast: {},
+            MovieGenres: {},
+            Person: {}
         }
     },
     Forms: {

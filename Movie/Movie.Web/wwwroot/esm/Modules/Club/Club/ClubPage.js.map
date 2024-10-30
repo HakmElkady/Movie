@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../Modules/Club/Club/ClubPage.tsx", "../../../../../Modules/Club/Club/ClubGrid.tsx"],
+  "sourcesContent": ["\uFEFFimport { gridPageInit } from '@serenity-is/corelib';\r\nimport { ClubGrid } from './ClubGrid';\r\n\r\nexport default () => gridPageInit(ClubGrid);", "\uFEFFimport { Decorators, EntityGrid } from '@serenity-is/corelib';\r\nimport { ClubColumns, ClubRow, ClubService } from '../../ServerTypes/Club';\r\nimport { ClubDialog } from './ClubDialog';\r\n\r\n@Decorators.registerClass('Movie.Club.ClubGrid')\nexport class ClubGrid extends EntityGrid<ClubRow> {\n    protected getColumnsKey() { return ClubColumns.columnsKey; }\n    protected getDialogType() { return ClubDialog; }\n    protected getRowDefinition() { return ClubRow; }\n    protected getService() { return ClubService.baseUrl; }\n}"],
+  "mappings": "iNAAC,IAAAA,EAA6B,SCA7B,IAAAC,EAAuC,SAAxC,IAAAC,EAAAC,EAAAC,EAIAF,EAAA,CAAC,aAAW,cAAc,qBAAqB,GACxC,IAAMG,EAAN,MAAMA,UAAiBD,EAAA,aAAoB,CACpC,eAAgB,CAAE,OAAOE,EAAY,UAAY,CACjD,eAAgB,CAAE,OAAOC,CAAY,CACrC,kBAAmB,CAAE,OAAOC,CAAS,CACrC,YAAa,CAAE,OAAOC,EAAY,OAAS,CACzD,EALON,EAAAO,EAAAN,GAAMC,EAANM,EAAAR,EAAA,aADPD,EACaG,GAAqCO,EAAAP,EAAA,YAA3CQ,EAAAV,EAAA,EAAME,GAAN,IAAMS,EAANT,EDFP,IAAOU,EAAQC,EAAA,OAAM,gBAAaC,CAAQ,EAA3B",
+  "names": ["import_corelib", "import_corelib", "_ClubGrid_decorators", "_init", "_a", "_ClubGrid", "ClubColumns", "ClubDialog", "ClubRow", "ClubService", "__decoratorStart", "__decorateElement", "__name", "__runInitializers", "ClubGrid", "ClubPage_default", "__name", "ClubGrid"]
+}

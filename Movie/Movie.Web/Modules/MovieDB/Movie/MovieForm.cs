@@ -1,4 +1,5 @@
 using Movie.Modules.MovieDB.Movie;
+using MovieTutorial.MovieDB;
 using Serenity.ComponentModel;
 using System;
 
@@ -12,6 +13,10 @@ public class MovieForm
 
     [TextAreaEditor(Rows = 3)]
     public string Description { get; set; }
+
+    [DisplayName("Cast"), MovieCastEditor, IgnoreName]
+    public List<MovieCastRow> CastList { get; set; }
+
 
     [TextAreaEditor(Rows = 8)]
     public string Storyline { get; set; }

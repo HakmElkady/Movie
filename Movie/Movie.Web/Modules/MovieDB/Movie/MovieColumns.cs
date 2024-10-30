@@ -24,7 +24,6 @@ public class MovieColumns
 
     public MovieKind Kind { get; set; }
 
-
     [Width(200), GenreListFormatter]
     public List<int> GenreList { get; set; }
 
