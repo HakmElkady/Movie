@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using System.ComponentModel;
 
 namespace Movie.MovieDB.Columns;
@@ -7,10 +7,17 @@ namespace Movie.MovieDB.Columns;
 [BasedOnRow(typeof(MovieCastRow), CheckNames = true)]
 public class MovieCastColumns
 {
-    [EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
-    public int MovieCastId { get; set; }
-    public string MovieTitle { get; set; }
+    //[EditLink, DisplayName("Db.Shared.RecordId"), AlignRight]
+    //public int MovieCastId { get; set; }
+    //public string MovieTitle { get; set; }
+
+
+    [EditLink, Width(250)]
     public string PersonFullName { get; set; }
-    [EditLink]
+    [EditLink, Width(250)]
     public string Character { get; set; }
+
+
+
+
 }

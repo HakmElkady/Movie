@@ -7,6 +7,7 @@ export interface PersonColumns {
     PersonId: Column<PersonRow>;
     FirstName: Column<PersonRow>;
     LastName: Column<PersonRow>;
+    FullName: Column<PersonRow>;
     BirthDate: Column<PersonRow>;
     BirthPlace: Column<PersonRow>;
     Gender: Column<PersonRow>;

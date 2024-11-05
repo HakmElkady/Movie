@@ -1,4 +1,5 @@
 using Movie.Modules.MovieDB.Movie;
+using Movie.MovieDB.Columns;
 using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
@@ -46,6 +47,21 @@ public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
     public List<int> GenreList { get => fields.GenreList[this]; set => fields.GenreList[this] = value; }
 
 
+    [MasterDetailRelation(foreignKey: nameof(MovieCastRow.MovieId), ColumnsType = typeof(MovieCastColumns))]
+    [DisplayName("Cast List"), NotMapped]
+    public List<MovieCastRow> CastList { get => fields.CastList[this]; set => fields.CastList[this] = value; }
+
+
+    [DisplayName("Primary Image"), Size(100)]
+    [ImageUploadEditor(FilenameFormat = "Movie/PrimaryImage/~")]
+    public string PrimaryImage { get => fields.PrimaryImage[this]; set => fields.PrimaryImage[this] = value; }
+
+    [DisplayName("Gallery Images")]
+    [MultipleImageUploadEditor(FilenameFormat = "Movie/GalleryImages/~")]
+    public string GalleryImages { get => fields.GalleryImages[this]; set => fields.GalleryImages[this] = value; }
+
+
+
     public class RowFields : RowFieldsBase
     {
         public Int32Field MovieId;
@@ -57,7 +73,9 @@ public sealed class MovieRow : Row<MovieRow.RowFields>, IIdRow, INameRow
         public Int32Field Runtime;
         public EnumField<MovieKind> Kind;
         public ListField<int> GenreList;
-
+        public RowListField<MovieCastRow> CastList;
+        public StringField PrimaryImage;
+        public StringField GalleryImages;
 
     }
 }

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../Modules/MovieDB/MovieCast/MovieCastEditDialog.css", "../../../../../Modules/MovieDB/Person/PersonDialog.css"],
+  "sourcesContent": [".s-MovieDB-MovieCastEditDialog > .modal-dialog {\r\n  width: 450px;\r\n}\r\n", ".s-MovieDB-PersonDialog .s-PersonMovieGrid > .grid-container {\r\n  height: 500px;\r\n}\r\n"],
+  "mappings": "AAAA,CAAC,6BAA8B,CAAE,CAAC,aAChC,MAAO,KACT,CCFA,CAAC,uBAAuB,CAAC,iBAAkB,CAAE,CAAC,eAC5C,OAAQ,KACV",
+  "names": []
+}

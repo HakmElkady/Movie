@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 
 namespace Movie.MovieDB.Forms;
 
@@ -6,7 +6,7 @@ namespace Movie.MovieDB.Forms;
 [BasedOnRow(typeof(MovieCastRow), CheckNames = true)]
 public class MovieCastForm
 {
-    public int MovieId { get; set; }
     public int PersonId { get; set; }
     public string Character { get; set; }
+
 }

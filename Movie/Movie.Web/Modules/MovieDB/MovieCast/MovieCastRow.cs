@@ -1,4 +1,4 @@
-﻿using Serenity.ComponentModel;
+using Serenity.ComponentModel;
 using Serenity.Data;
 using Serenity.Data.Mapping;
 using System.ComponentModel;
@@ -32,7 +32,7 @@ public sealed class MovieCastRow : Row<MovieCastRow.RowFields>, IIdRow, INameRow
     [DisplayName("Movie Title"), Origin(jMovie, nameof(MovieRow.Title))]
     public string MovieTitle { get => fields.MovieTitle[this]; set => fields.MovieTitle[this] = value; }
 
-    [DisplayName("Person"), Origin(jPerson, nameof(PersonRow.FullName))]
+    [DisplayName("Actor/Actress"), Origin(jPerson, nameof(PersonRow.FullName))]
     public string PersonFullName { get => fields.PersonFullName[this]; set => fields.PersonFullName[this] = value; }
 
     public class RowFields : RowFieldsBase
@@ -41,7 +41,6 @@ public sealed class MovieCastRow : Row<MovieCastRow.RowFields>, IIdRow, INameRow
         public Int32Field MovieId;
         public Int32Field PersonId;
         public StringField Character;
-
         public StringField MovieTitle;
         public StringField PersonFullName;
     }

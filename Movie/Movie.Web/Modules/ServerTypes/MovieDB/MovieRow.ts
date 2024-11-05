@@ -1,5 +1,6 @@
 ﻿import { fieldsProxy } from "@serenity-is/corelib";
 import { MovieKind } from "../Modules/MovieDB.Movie.MovieKind";
+import { MovieCastRow } from "./MovieCastRow";
 
 export interface MovieRow {
     MovieId?: number;
@@ -11,6 +12,9 @@ export interface MovieRow {
     Runtime?: number;
     Kind?: MovieKind;
     GenreList?: number[];
+    CastList?: MovieCastRow[];
+    PrimaryImage?: string;
+    GalleryImages?: string;
 }
 
 export abstract class MovieRow {

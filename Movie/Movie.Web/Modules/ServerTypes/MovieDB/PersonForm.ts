@@ -1,4 +1,5 @@
-﻿import { StringEditor, DateEditor, EnumEditor, IntegerEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
+﻿import { StringEditor, DateEditor, EnumEditor, IntegerEditor, ImageUploadEditor, MultipleImageUploadEditor, PrefixedContext, initFormType } from "@serenity-is/corelib";
+import { PersonMovieGrid } from "../../MovieDB/Person/PersonMovieGrid";
 import { Gender } from "../Modules/MovieDB.Person.Gender";
 
 export interface PersonForm {
@@ -8,6 +9,9 @@ export interface PersonForm {
     BirthPlace: StringEditor;
     Gender: EnumEditor;
     Height: IntegerEditor;
+    PrimaryImage: ImageUploadEditor;
+    GalleryImages: MultipleImageUploadEditor;
+    MoviesGrid: PersonMovieGrid;
 }
 
 export class PersonForm extends PrefixedContext {
@@ -24,6 +28,9 @@ export class PersonForm extends PrefixedContext {
             var w1 = DateEditor;
             var w2 = EnumEditor;
             var w3 = IntegerEditor;
+            var w4 = ImageUploadEditor;
+            var w5 = MultipleImageUploadEditor;
+            var w6 = PersonMovieGrid;
 
             initFormType(PersonForm, [
                 'FirstName', w0,
@@ -31,7 +38,10 @@ export class PersonForm extends PrefixedContext {
                 'BirthDate', w1,
                 'BirthPlace', w0,
                 'Gender', w2,
-                'Height', w3
+                'Height', w3,
+                'PrimaryImage', w4,
+                'GalleryImages', w5,
+                'MoviesGrid', w6
             ]);
         }
     }

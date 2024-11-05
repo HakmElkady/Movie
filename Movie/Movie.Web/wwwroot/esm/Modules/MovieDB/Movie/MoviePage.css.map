@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../Modules/MovieDB/MovieCast/MovieCastEditDialog.css"],
+  "sourcesContent": [".s-MovieDB-MovieCastEditDialog > .modal-dialog {\r\n  width: 450px;\r\n}\r\n"],
+  "mappings": "AAAA,CAAC,6BAA8B,CAAE,CAAC,aAChC,MAAO,KACT",
+  "names": []
+}
